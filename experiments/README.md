@@ -12,6 +12,6 @@ For each experiment, record only what is needed to answer:
 4. What coordination cost did the workbench add?
 5. What should be kept, changed, or removed because of the observation?
 
-A useful first experiment is to use ENA as a real project and test whether a fresh AI can continue from `NOW.md` + a normal 10-exchange handoff without reading the old multi-layer takeover machinery.
+Choose experiments from real work already worth doing. Do not invent a project merely to demonstrate the workbench.
 
 Patterns belong in templates only after repeated use shows that they are worth standardizing.
