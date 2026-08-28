@@ -82,5 +82,3 @@ Use it first. Notice repeated pain. Only then add structure.
 Avoid the reverse pattern:
 
 `IMAGINE FUTURE PAIN → DESIGN SYSTEM → GOVERN SYSTEM`
-
-ENA is the first real project using this workbench, but this repository is intentionally not ENA-specific. Any pattern that only helps ENA remains project-local until it proves useful elsewhere.
