@@ -22,11 +22,27 @@ A new AI session should normally:
    - What is the next consequential action?
 5. If those are clear, **start working**. Do not perform a full project audit by default.
 
+## Before a consequential step
+
+Do not stay head-down indefinitely. At major milestones, scope changes, substantial new mechanisms, or phase transitions, reconnect the next action to the project plan.
+
+Ask briefly:
+
+- Who are we solving this for?
+- What concrete problem are we solving?
+- What approach are we currently using?
+- What SMART evidence would count as success?
+- How does this step move us closer to that success?
+- Are we solving the original problem, or mainly maintaining machinery created by our previous solution?
+- Does the intended portability still match the project: local, reusable, or general?
+
+If the goal or approach should change, change it explicitly. **Do not drift silently.**
+
 ## Minimal working set
 
 The first version intentionally stays small:
 
-- [`templates/PROJECT-PLAN.md`](templates/PROJECT-PLAN.md) — what the project is trying to achieve now.
+- [`templates/PROJECT-PLAN.md`](templates/PROJECT-PLAN.md) — who the project is for, the concrete problem, current approach, SMART success, scope, portability, and current work.
 - [`templates/NOW.md`](templates/NOW.md) — the single hot status surface for the next session.
 - [`templates/HANDOFF.md`](templates/HANDOFF.md) — what to carry between sessions, including concrete conversation defaults.
 - [`templates/DECISION.md`](templates/DECISION.md) — only for decisions that would otherwise be expensive to reconstruct.
