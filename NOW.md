@@ -12,6 +12,8 @@ Test whether a very small working protocol can help a human and fresh AI continu
 
 - The repository still uses a deliberately small working set: README + PROJECT-PLAN + NOW + HANDOFF + optional DECISION + experiments.
 - ENA provided the first substantial real-project stress test of the working method.
+- Human-AI Workbench is now explicitly the canonical home for project-general human-AI working method abstracted from ENA or other real projects; originating projects should retain local adapters/occurrences rather than parallel canonical copies.
+- `guytogay/ena-field-guide` is a separate layer for evidence-backed ENA-derived operating HOW, not project collaboration method.
 - Normal continuation using one hot `NOW.md` surface remained useful and cheaper than full project audit.
 - One genuinely long/decision-heavy ENA session justified a **DEEP succession** rather than stretching the normal handoff default into a universal rule.
 - Fresh independent AI evaluation required the opposite context strategy: structural isolation and minimal priming.
@@ -60,6 +62,8 @@ Record only observations that materially change the working method.
 ## Do not redo / do not overgrow
 
 - Do not turn this repository into ENA.
+- Do not absorb ENA theory, Current semantics, or ENA-specific experiment results merely because they produced a working-method lesson.
+- Do not absorb ENA Field Guide HOW; practical ENA application belongs in `guytogay/ena-field-guide`.
 - Do not add a universal cleanroom framework after one project.
 - Do not make SHA/tree verification mandatory for ordinary work.
 - Do not treat DEEP handoff as the new default.
