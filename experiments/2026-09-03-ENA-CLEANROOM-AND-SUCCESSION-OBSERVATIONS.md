@@ -220,3 +220,50 @@ Questions:
 - Does branch/workspace retirement remain valuable for non-research projects?
 
 Until repeated use answers these, keep this file as an observation rather than expanding the Workbench into a governance system.
+
+## 12. Treatment exposure is an execution fact, not a readiness claim
+
+The later ENA developmental-inheritance experiment exposed a new execution-integrity failure that the earlier cleanroom method did not catch.
+
+Two fresh experimental successors returned plausible initialization/readback responses for the same treatment repository, but later provenance responses independently stated that they had **not actually opened/read the treatment before the behavioral probes**.
+
+The important general working-method distinction is:
+
+```text
+RESOURCE ADDRESS PRESENT
+!= RESOURCE OPENED
+!= FULL INPUT INSPECTED
+!= INPUT ASSIMILATED
+```
+
+A `READY` acknowledgement is therefore not proof of treatment delivery. A shallow readback such as the first visible line can also be satisfied without establishing that the decision-relevant input was actually inspected.
+
+For experiments where exposure itself is part of the causal intervention, verify exposure **before** collecting behavioral evidence.
+
+The useful pattern from the replacement run was a lightweight, non-semantic verification that required access to a structurally distant part of the file—for example a non-empty-line count plus the exact final non-empty line. This strengthened evidence that the file had actually been traversed without asking the successor to summarize or rehearse the treatment semantics.
+
+Important limits:
+
+- proof of inspection is still not proof of assimilation;
+- self-reported provenance is evidence, not an objective tool trace;
+- if independent execution/tool traces are available, prefer them for proving access;
+- do not ask for a semantic summary merely to prove reading, because the verification itself can become an extra treatment exposure or rehearsal;
+- choose verification fields before seeing behavioral quality when practical, so verification cannot become a selective way to discard inconvenient outcomes.
+
+Protocol classification should remain explicit:
+
+```text
+TREATMENT NEVER ACCESSED BEFORE PROBES
+= protocol failure
+
+TREATMENT ACCESSED, THEN MISREMEMBERED OR MISUSED
+= valid behavioral outcome
+```
+
+Protocol-deviant attempts should be preserved rather than silently deleted.
+
+Generalizable observation:
+
+> When AI behavior is evidence and treatment delivery is causal, verify the delivery event separately from the behavioral response. Do not infer execution from compliance language.
+
+This remains an **observation**, not yet a universal Workbench template. Reuse in another real experiment should determine whether a reusable treatment-exposure checklist is warranted.
