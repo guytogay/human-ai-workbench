@@ -6,6 +6,41 @@ This repository is not a constitution, governance framework, or certification sy
 
 The workbench should remain **cheaper than the work it helps coordinate**.
 
+## Repository role and canonical ownership
+
+Human-AI Workbench is the canonical home for **generalizable human-AI project-working method** discovered through real projects.
+
+It may originate from experience inside another project and then return to serve that project, while remaining independently reusable elsewhere.
+
+The first major example is ENA:
+
+```text
+ENA real project work
+-> repeated collaboration / continuity / experiment friction
+-> extract the project-general method
+-> Human-AI Workbench
+-> method returns to support ENA
+-> same method can be tested in unrelated projects
+```
+
+Repository boundaries:
+
+- `guytogay/evolution-native-agent-architecture` owns ENA theory, mechanisms, Current/release semantics, ENA research evidence, and ENA-specific project occurrences.
+- `guytogay/human-ai-workbench` owns reusable human-AI collaboration method: continuation, handoff, project-state practice, lightweight experiment execution discipline, and temporary-workspace lifecycle when those patterns generalize beyond ENA.
+- `guytogay/ena-field-guide` owns evidence-backed practical HOW for applying ENA-derived mechanisms in Agent/Host work.
+
+Do not keep parallel canonical copies merely because a method was first discovered inside ENA.
+
+Preferred ownership transition:
+
+```text
+project occurrence discovers method
+-> Workbench becomes canonical for the reusable method
+-> originating project keeps only its local adapter / occurrence / evidence
+```
+
+This is not a demand to move every project-specific detail here. A method belongs here only when it can be stated without requiring ENA-specific theory or one project's internal state.
+
 ## Start here
 
 For an active project, keep one short live status file based on [`templates/NOW.md`](templates/NOW.md).
