@@ -39,7 +39,10 @@ A real-use experiment note records additional observations from ENA:
 - let null/tie results narrow the hypothesis;
 - make the tested mechanism causally capable of changing the task;
 - archive unique evidence before deleting disposable branches/repos;
-- temporary coordination surfaces should expire after their purpose ends.
+- temporary coordination surfaces should expire after their purpose ends;
+- when treatment exposure is causal, verify actual resource inspection separately from `READY`/compliance language;
+- prefer non-semantic proof-of-read checks that do not rehearse or strengthen the treatment;
+- distinguish protocol failure (`never accessed treatment`) from a valid behavioral failure (`accessed, then misremembered/misused`).
 
 Observation:
 
@@ -52,6 +55,8 @@ Observation:
 - Which lightweight experiment practices recur enough to deserve their own reusable template?
 - Are current default numbers still useful outside the original ENA-heavy use case?
 - Does explicit temporary-workspace retirement reduce real coordination cost in ordinary projects?
+- Does treatment-exposure verification recur outside ENA strongly enough to deserve a reusable checklist/template?
+- What is the cheapest reliable evidence of actual resource inspection when objective tool traces are unavailable?
 
 ## Next consequential action
 
@@ -68,4 +73,5 @@ Record only observations that materially change the working method.
 - Do not make SHA/tree verification mandatory for ordinary work.
 - Do not treat DEEP handoff as the new default.
 - Do not create templates merely because the ENA session produced many useful lessons.
+- Do not treat `READY` or a shallow readback as proof that an experimental treatment/resource was actually inspected.
 - Keep following `USE -> REPEAT -> PAIN -> ABSTRACT`.
