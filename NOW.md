@@ -8,9 +8,7 @@ Human-AI Workbench
 
 Reduce low-value human coordination work while preserving human judgment, fresh-AI isolation, evidence quality and project control.
 
-The immediate real-work pressure is ENA: the human should not have to act as a manual copy/paste message bus between a manager AI and fresh successor/validator sessions.
-
-Candidate relation under exploration:
+Candidate relation under real-use testing:
 
 ```text
 HUMAN IN THE LOOP
@@ -18,24 +16,34 @@ HUMAN IN THE LOOP
 HUMAN AS THE LOOP
 ```
 
+A second lesson now has real ENA evidence:
+
+```text
+REDUCE COORDINATION BY DESIGN
+BEFORE
+AUTOMATING COORDINATION
+```
+
 ## Where we are
 
-- The repository still uses a deliberately small working set: README + PROJECT-PLAN + NOW + HANDOFF + optional DECISION + experiments.
-- ENA provided the first substantial real-project stress test of the working method.
-- Human-AI Workbench is the canonical home for project-general human-AI working method; ENA retains only local occurrences and scientific evidence.
+- The repository remains deliberately small: README + PROJECT-PLAN + NOW + HANDOFF + optional DECISION + experiments.
+- Human-AI Workbench remains the canonical home for project-general collaboration method; ENA retains its own theory, occurrences and scientific evidence.
 - Three context modes remain explicit: `NORMAL continuation`, `DEEP succession`, and `FRESH independent evaluation`.
-- Treatment-exposure integrity is now recorded: `READY` or shallow readback does not prove actual resource inspection.
-- A new real workflow problem is active: reduce or eliminate manual human relay between AIs.
+- Treatment-exposure integrity remains explicit: `READY` or shallow readback does not prove actual resource inspection.
+- ENA Temporal Assimilation supplied the first completed real pressure test of manual fresh-session relay.
+- The next ENA Metamemory experiment has already reduced relay by redesigning each run to one complete treatment delivery rather than reproducing a staged workflow that the causal question does not require.
 
-## Active automation exploration
+## Active observations
 
-Observation / exploration:
+Automation exploration:
 
 `experiments/2026-09-04-HUMAN-AI-AUTOMATION-EXPLORATION.md`
 
-The current ChatGPT task environment was verified to support ordinary OS child processes, but no directly callable local `codex`, `hermes`, `openclaw`, `claude`, `gemini`, or `aider` executable was found.
+Completed ENA relay pressure-test observation:
 
-Therefore:
+`experiments/2026-09-04-ENA-TEMPORAL-RELAY-PRESSURE-TEST.md`
+
+The current task environment can perform ordinary OS/process and repository automation, but that does not itself create a genuinely fresh independent AI worker.
 
 ```text
 OS SUBPROCESS AVAILABLE
@@ -43,36 +51,27 @@ OS SUBPROCESS AVAILABLE
 FRESH INDEPENDENT AI WORKER AVAILABLE
 ```
 
-The active question is how to obtain the lightest reliable execution surface that can invoke isolated AI workers and exchange staged messages without human transport work.
+Do not solve that limitation by immediately building a large orchestration framework.
 
-Candidate surfaces to investigate, in increasing infrastructure cost:
+## Current method under test
 
-1. local mechanical orchestration for prompts, hashes, sequencing, capture and scoring;
-2. API-backed fresh model sessions;
-3. installed external Agent runners / CLIs when actually available;
-4. GitHub Actions or other isolated runners invoking external models;
-5. persistent multi-Agent orchestration only after repeated real use justifies it.
+When coordination pain appears:
 
-## What should be automated regardless of worker surface
-
-- frozen prompt retrieval rather than retyping;
-- prompt/order/hash validation;
-- per-run state machines;
-- response-format checks;
-- first-output capture;
-- provenance/run ledgers;
-- protocol-deviation classification;
-- post-freeze scoring support;
-- Git branch/PR packaging;
-- temporary workspace cleanup checks.
+1. identify which steps require human judgment;
+2. identify which remaining steps are only transport/mechanical coordination;
+3. ask whether the workflow can remove those steps without changing the phenomenon or decision quality;
+4. only then automate unavoidable transport;
+5. add persistent orchestration only after repeated real use justifies its maintenance cost.
 
 This keeps separate:
 
 ```text
+WORKFLOW REDESIGN
 AI EXECUTION AUTOMATION
-and
-WORKFLOW / EXPERIMENT ORCHESTRATION AUTOMATION
+EXPERIMENT / COORDINATION AUTOMATION
 ```
+
+They solve different problems.
 
 ## Human role target
 
@@ -85,24 +84,27 @@ Human attention should be spent on:
 - reality contact and values;
 - escalation when automation cannot safely decide.
 
-Human attention should not be spent on mechanically relaying already-decided bytes between AIs when a reliable transport can do it.
-
-## Current unknowns
-
-- Which fresh-agent execution surfaces are actually callable from ChatGPT, GitHub or the user's infrastructure?
-- Can API-backed sessions provide enough isolation and multi-turn continuity for fresh-successor experiments?
-- Can GitHub Actions or another runner invoke them securely and reproducibly?
-- What is the cheapest reliable evidence of actual treatment/resource inspection when objective tool traces are unavailable?
-- How much infrastructure is justified before automation costs more than the relay work it removes?
-- Which parts recur across unrelated projects strongly enough to deserve a reusable template?
+Human attention should not be spent on mechanically relaying already-decided bytes when a reliable cheaper alternative exists.
 
 ## Next consequential action
 
-Inventory and test the actually available execution surfaces, starting with the lowest-infrastructure option that can support one complete manager -> isolated worker -> evidence-capture loop without human copy/paste.
+Use ENA Metamemory Update Policy v1 as the next real measurement point for the reduced workflow.
 
-Use the upcoming ENA temporal-assimilation/developmental-order experiment as a real pressure test, but do not let the automation apparatus determine ENA's scientific outcome.
+Record:
 
-Do not build a persistent multi-Agent framework until a smaller solution has been tried and found insufficient.
+- human transport actions per run;
+- whether any human action actually requires judgment;
+- treatment-delivery/output-capture errors;
+- whether the remaining burden is large enough to justify an API-backed or external Agent-runner execution surface.
+
+If one-shot workflow redesign makes the remaining relay cheap, do **not** build a complex orchestrator merely because automation is possible.
+
+## Current unknowns
+
+- Which fresh-agent execution surfaces are actually callable and sufficiently isolated when automation becomes justified?
+- Can API-backed sessions match the experimental Host requirements where Temporary Chat comparability matters?
+- What is the cheapest reliable evidence of treatment/resource inspection when objective tool traces are unavailable?
+- How much remaining coordination pain must recur before it deserves a reusable template rather than another experiment note?
 
 ## Do not redo / do not overgrow
 
@@ -112,6 +114,6 @@ Do not build a persistent multi-Agent framework until a smaller solution has bee
 - Do not automate consequential human judgment merely to maximize autonomy.
 - Do not treat OS subprocesses as independent AI workers.
 - Do not treat an Agent runner as an independent validator unless context isolation is demonstrated.
+- Do not preserve unnecessary workflow stages merely so they can be automated.
 - Do not add a universal orchestration template before repeated real use.
-- Do not treat `READY` or a shallow readback as proof of treatment exposure.
 - Keep following `USE -> REPEAT -> PAIN -> ABSTRACT`.
