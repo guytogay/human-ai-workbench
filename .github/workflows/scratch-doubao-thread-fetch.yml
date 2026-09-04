@@ -1,0 +1,66 @@
+name: Scratch Doubao Thread Fetch
+
+on:
+  push:
+    branches:
+      - scratch/doubao-thread-xdqe8
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install playwright@1.55.0 >/dev/null 2>&1
+          npx playwright install --with-deps chromium
+
+      - name: Fetch public Doubao thread
+        env:
+          THREAD_URL: https://www.doubao.com/thread/xDQe8KM1QaLE7DMq2
+        run: |
+          cat > fetch-thread.js <<'EOF'
+          const fs = require('fs');
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({headless:true, args:['--disable-blink-features=AutomationControlled']});
+            const page = await browser.newPage({
+              viewport:{width:1440,height:1200},
+              userAgent:'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            });
+            try {
+              await page.goto(process.env.THREAD_URL, {waitUntil:'domcontentloaded', timeout:45000});
+              await page.waitForLoadState('networkidle', {timeout:15000}).catch(()=>{});
+              await page.locator('body').waitFor({state:'visible', timeout:15000});
+              const title = await page.title().catch(()=> '');
+              const text = await page.locator('body').innerText({timeout:15000});
+              fs.writeFileSync('doubao-thread.txt', `TITLE: ${title}\nURL: ${process.env.THREAD_URL}\n\n${text}`, 'utf8');
+              console.log(`FETCH_OK title=${JSON.stringify(title)} chars=${text.length}`);
+              console.log('---THREAD_PREVIEW_BEGIN---');
+              console.log(text.slice(0,12000));
+              console.log('---THREAD_PREVIEW_END---');
+            } finally {
+              await browser.close();
+            }
+          })().catch(err => { console.error(err); process.exit(1); });
+          EOF
+          node fetch-thread.js
+
+      - name: Upload thread text
+        uses: actions/upload-artifact@v4
+        with:
+          name: doubao-thread-xdqe8
+          path: doubao-thread.txt
+          if-no-files-found: error
