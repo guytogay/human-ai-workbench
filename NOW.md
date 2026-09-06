@@ -17,6 +17,8 @@ CONTROL COST SHOULD TRACK CHANGE RISK
 PROTECT HISTORY != PROTECT STASIS
 BUILD OFF ACTIVE POINTER -> READBACK -> ATOMIC ATTACH
 DUPLICATED LIVE STATE -> SYNCHRONIZATION DEBT
+INFORMATION ISOLATION != EXECUTION ISOLATION
+ORCHESTRATION AUTOMATION != FRESH EXECUTION SURFACE
 ```
 
 ## Where we are
@@ -30,6 +32,8 @@ DUPLICATED LIVE STATE -> SYNCHRONIZATION DEBT
 - ENA v0.3.8 supplied a real pressure test of risk-insensitive release governance. Separating immutable history from a movable Current pointer reduced the bottleneck.
 - ENA v0.3.9 supplied a real pressure test of multi-file publication coherence: an incorrect blob-to-path assumption was caught by readback before the candidate commit was attached to the release branch, so no half-valid state became live.
 - The same v0.3.9 occurrence showed that version-binding stable cold documents creates mechanical synchronization debt; only surfaces whose identity actually depends on the active version should carry that live version state by default.
+- Metamemory manager-side automation now verifies frozen treatment identity, parses/scorers M1-M7 and applies the frozen replication trigger, yet the experiment still requires four genuinely fresh ChatGPT Temporary Chats that the current manager execution surface cannot instantiate.
+- This repeated boundary distinguishes information/process isolation from execution isolation: clean repos, exact bytes, CI and scoring do not themselves create a fresh model context.
 
 ## Active observations
 
@@ -49,10 +53,15 @@ Atomic publish/readback pressure test:
 
 `experiments/2026-09-06-ENA-ATOMIC-PUBLISH-READBACK-PRESSURE-TEST.md`
 
+Fresh-execution boundary observation:
+
+`experiments/2026-09-06-ENA-METAMEMORY-FRESH-EXECUTION-BOUNDARY.md`
+
 The current task environment can perform ordinary OS/process/repository automation, but that does not itself create a genuinely fresh independent AI worker.
 
 ```text
 OS SUBPROCESS AVAILABLE != FRESH INDEPENDENT AI WORKER AVAILABLE
+INFORMATION ISOLATION != EXECUTION ISOLATION
 ```
 
 ## Current methods under test
@@ -66,6 +75,13 @@ When coordination pain appears:
 3. ask whether the workflow can remove those steps without changing the phenomenon or decision quality;
 4. automate only unavoidable transport;
 5. add persistent orchestration only after repeated real use justifies its maintenance cost.
+
+When independence is required, separately ask:
+
+1. can treatment/sequencing/capture/scoring be isolated and automated?
+2. can the required fresh model execution context actually be instantiated without manager contamination?
+
+Do not infer the second from success on the first.
 
 ### 2. Proportional progression
 
@@ -113,18 +129,22 @@ Human attention should be spent on:
 
 Human attention should not be spent on mechanically relaying bytes, synchronizing duplicate live-state copies, or repeating ceremony whose decision value has disappeared.
 
+If the required fresh execution surface is genuinely unavailable to automation, keep the residual human transport minimal and explicit rather than pretending a manager/subprocess/clean repo is an independent worker.
+
 ## Next consequential actions
 
-1. Use ENA Metamemory Update Policy v1 as the next measurement point for the reduced relay workflow.
+1. Use ENA Metamemory Update Policy v1 as the next measurement point: manager-side orchestration is ready; measure the residual human actions required only to instantiate/carry the four fresh Temporary Chat runs.
 2. Observe whether ENA's rapid-Current method continues to work under future R0/R1/R2-like changes or whether risk misclassification creates new maintenance pain.
 3. Observe another real multi-object publication before promoting atomic publish/readback from one strong occurrence to a reusable template.
+4. Do not build a persistent Agent runner solely to eliminate four one-shot manual launches; revisit API/runner/browser-backed execution when repeated workload or a compatible Host makes the payoff real.
 
 For Metamemory record:
 
 - human transport actions per run;
 - whether any human action actually requires judgment;
 - treatment-delivery/output-capture errors;
-- whether remaining burden justifies an API-backed or external Agent-runner surface.
+- whether remaining burden justifies an API-backed or external Agent-runner surface;
+- whether a candidate automation surface preserves the exact experimental Host or silently changes it.
 
 For progression/publication record:
 
@@ -145,6 +165,7 @@ For progression/publication record:
 - How should a project detect systematic under-classification of change risk without rebuilding the heavy process it removed?
 - When does staged atomic publication save more coordination than it adds?
 - How much synchronization debt is actually removed by making cold semantic content version-neutral across multiple projects?
+- When should exact-Host comparability be relaxed in favor of an API/runner that removes human transport, and what evidence is required before changing that experimental contract?
 
 ## Do not redo / do not overgrow
 
@@ -152,8 +173,9 @@ For progression/publication record:
 - Do not absorb ENA theory, Current semantics, or Field Guide HOW.
 - Do not equate more Agents with better collaboration.
 - Do not automate consequential human judgment merely to maximize autonomy.
-- Do not treat OS subprocesses as independent AI workers.
+- Do not treat OS subprocesses, clean repositories, or CI jobs as independent AI workers.
 - Do not treat an Agent runner as an independent validator unless context isolation is demonstrated.
+- Do not replace a preregistered execution Host after seeing the design merely because another surface is easier to automate.
 - Do not preserve unnecessary workflow stages merely so they can be automated.
 - Do not add a universal orchestration, release, or transaction template before repeated real use.
 - Do not use "rapid" as permission to hide semantic/high-consequence changes inside low-risk labels.
