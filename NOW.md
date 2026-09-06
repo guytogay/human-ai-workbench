@@ -15,6 +15,8 @@ HUMAN IN THE LOOP != HUMAN AS THE LOOP
 REDUCE COORDINATION BY DESIGN BEFORE AUTOMATING COORDINATION
 CONTROL COST SHOULD TRACK CHANGE RISK
 PROTECT HISTORY != PROTECT STASIS
+BUILD OFF ACTIVE POINTER -> READBACK -> ATOMIC ATTACH
+DUPLICATED LIVE STATE -> SYNCHRONIZATION DEBT
 ```
 
 ## Where we are
@@ -25,7 +27,9 @@ PROTECT HISTORY != PROTECT STASIS
 - Treatment-exposure integrity remains explicit: `READY` or shallow readback does not prove actual resource inspection.
 - ENA Temporal Assimilation supplied a real pressure test of manual fresh-session relay.
 - ENA Metamemory redesigned each primary run to one complete treatment delivery, reducing relay before automating it.
-- ENA v0.3.8 supplied a second real pressure test: release governance had become weakly sensitive to the actual risk of the change. Separating immutable history from a movable Current pointer reduced the bottleneck.
+- ENA v0.3.8 supplied a real pressure test of risk-insensitive release governance. Separating immutable history from a movable Current pointer reduced the bottleneck.
+- ENA v0.3.9 supplied a real pressure test of multi-file publication coherence: an incorrect blob-to-path assumption was caught by readback before the candidate commit was attached to the release branch, so no half-valid state became live.
+- The same v0.3.9 occurrence showed that version-binding stable cold documents creates mechanical synchronization debt; only surfaces whose identity actually depends on the active version should carry that live version state by default.
 
 ## Active observations
 
@@ -40,6 +44,10 @@ Completed relay pressure test:
 Rapid-progression pressure test:
 
 `experiments/2026-09-06-ENA-RAPID-CURRENT-PROGRESSION-PRESSURE-TEST.md`
+
+Atomic publish/readback pressure test:
+
+`experiments/2026-09-06-ENA-ATOMIC-PUBLISH-READBACK-PRESSURE-TEST.md`
 
 The current task environment can perform ordinary OS/process/repository automation, but that does not itself create a genuinely fresh independent AI worker.
 
@@ -73,10 +81,22 @@ When a control/release/review pipeline delays a useful change:
 
 The reusable property is **risk-proportional validation**, not ENA's exact R0/R1/R2 vocabulary.
 
+### 3. Staged atomic publication
+
+When several paths jointly define one active state and partial exposure would be misleading:
+
+1. build the candidate off the active pointer;
+2. assemble one immutable/staged object where the Host supports it;
+3. read back the actual object and the small set of decision-critical path/content mappings;
+4. attach or switch the active pointer only after readback passes;
+5. use direct writes instead when there is only one independent state unit or partial visibility is harmless.
+
+Prefer stable cold content plus a small live identity pointer over copying the same mutable version/status fact into many files.
+
 ```text
-AUTOMATED HEAVY PROCESS != NECESSARY HEAVY PROCESS
-UNRELATED OPEN WORK != BLOCKING DEPENDENCY
-IMMUTABLE HISTORY != IMMOBILE WORKING DEFAULT
+OBJECT_CREATED != ACTIVE_STATE_MUTATED
+WRITE_REQUEST_ACCEPTED != CORRECT_OBJECT_ASSEMBLED
+VERSION THE SURFACE THAT NEEDS VERSION IDENTITY
 ```
 
 ## Human role target
@@ -91,12 +111,13 @@ Human attention should be spent on:
 - reality contact and values;
 - escalation when automation cannot safely decide.
 
-Human attention should not be spent on mechanically relaying bytes or repeating ceremony whose decision value has already disappeared.
+Human attention should not be spent on mechanically relaying bytes, synchronizing duplicate live-state copies, or repeating ceremony whose decision value has disappeared.
 
 ## Next consequential actions
 
 1. Use ENA Metamemory Update Policy v1 as the next measurement point for the reduced relay workflow.
 2. Observe whether ENA's rapid-Current method continues to work under future R0/R1/R2-like changes or whether risk misclassification creates new maintenance pain.
+3. Observe another real multi-object publication before promoting atomic publish/readback from one strong occurrence to a reusable template.
 
 For Metamemory record:
 
@@ -105,13 +126,15 @@ For Metamemory record:
 - treatment-delivery/output-capture errors;
 - whether remaining burden justifies an API-backed or external Agent-runner surface.
 
-For progression record:
+For progression/publication record:
 
 - gates that actually changed the decision;
 - time/steps from defect to corrected active default;
 - rollback usability;
 - post-progression defects;
-- evidence that a supposedly low-risk change was actually higher risk.
+- assembly errors caught only by readback;
+- synchronization edits avoided by keeping cold content version-neutral;
+- cases where direct writes were cheaper and equally safe.
 
 ## Current unknowns
 
@@ -120,6 +143,8 @@ For progression record:
 - What is the cheapest reliable evidence of treatment/resource inspection when objective tool traces are unavailable?
 - How many real progression cases are needed before risk-tiered release/progression deserves a reusable template?
 - How should a project detect systematic under-classification of change risk without rebuilding the heavy process it removed?
+- When does staged atomic publication save more coordination than it adds?
+- How much synchronization debt is actually removed by making cold semantic content version-neutral across multiple projects?
 
 ## Do not redo / do not overgrow
 
@@ -130,6 +155,7 @@ For progression record:
 - Do not treat OS subprocesses as independent AI workers.
 - Do not treat an Agent runner as an independent validator unless context isolation is demonstrated.
 - Do not preserve unnecessary workflow stages merely so they can be automated.
-- Do not add a universal orchestration or release template before repeated real use.
+- Do not add a universal orchestration, release, or transaction template before repeated real use.
 - Do not use "rapid" as permission to hide semantic/high-consequence changes inside low-risk labels.
+- Do not use atomic publication as proof that the candidate content itself is correct.
 - Keep following `USE -> REPEAT -> PAIN -> ABSTRACT`.
