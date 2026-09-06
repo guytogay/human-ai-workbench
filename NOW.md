@@ -39,6 +39,10 @@ ORCHESTRATION AUTOMATION != FRESH EXECUTION SURFACE
 
 ## Active observations
 
+Scope drift + null-result discipline occurrence (ENA-derived; per next-action #1, does NOT count toward cross-project promotion signals):
+
+`experiments/2026-09-06-SCOPE-DRIFT-AND-NULL-RESULT-DISCIPLINE.md`
+
 Automation exploration:
 
 `experiments/2026-09-04-HUMAN-AI-AUTOMATION-EXPLORATION.md`
