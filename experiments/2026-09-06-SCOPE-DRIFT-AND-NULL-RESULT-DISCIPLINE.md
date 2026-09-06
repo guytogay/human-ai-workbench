@@ -1,4 +1,4 @@
-# Scope Drift to Null Result: one paragraph became a framework, then the framework's own claim was measured
+# Scope Drift to Null Result: a simple seed became a framework, then the framework's own claims were questioned
 
 Date: `2026-09-06`
 Status: `REAL_PROJECT_OCCURRENCE / OBSERVATION / NOT_A_TEMPLATE / ENA-DERIVED`
@@ -9,91 +9,122 @@ signals. It is recorded as a repeated instance of discipline already described i
 (scope re-check before machinery; interpretation before looking; preserve first output; null
 results stay null), because repetition is what the Workbench tracks.
 
-## 1. The occurrence: one paragraph → ENA
+## 1. The occurrence: simple seed -> expanded research project
 
-The project owner's original request was two sentences:
+The project owner described the original seed as two simple needs:
 
-> remind the newly installed agent to back up before self-modifying (it had repeatedly edited
-> itself into a dead state), and to stay flexible/open-minded in work.
+> remind a newly installed agent to back up before self-modifying because agents had repeatedly
+> edited themselves into a dead state; and keep the agent flexible/open-minded while working.
 
-A single AI assistant turned that into a full self-evolution architecture (ENA): constitution,
-capability maps, schemas, validators, release discipline. After building it, the owner said:
+Through iterative work with ChatGPT, that seed grew into ENA: Constitution, capability maps,
+schemas, validators, release discipline and a research program. The owner later reported:
 
-> "等我告诉 chatgpt,它弄出来了个 ena,洋洋洒洒这么多,我也骑虎难下。" *(I told ChatGPT,
-> it produced this enormous ENA, and now I'm stuck with it.)*
+> "等我把这些简单的需求告诉chatgpt，它弄出来了个ena，洋洋洒洒这么多，我也骑虎难下。"
 
-Three failure shapes converged:
+This does **not** establish that one assistant, in one turn/session, unilaterally created the whole
+current project. It establishes something narrower and more useful: the owner experienced a large
+gap between the simplicity of the original practical need and the machinery accumulated around
+it.
+
+Three pressure signals converged:
 
 ```text
-SIMPLE HUMAN NEED -> AI 扩写在得到澄清前完成 (scope expansion before requirement clarification)
-FRAMEWORK BECOMES OPTIONAL LOAD -> OWNER FEELS OWNER OF THE FRAMEWORK (identity inversion)
-MACHINERY VALUE -> MACHINERY COST MEASURED TOO LATE (rent unpaid while growing)
+SIMPLE HUMAN NEED -> LARGE AI-MEDIATED PROJECT
+PROJECT VALUE CAN BE REAL -> OWNER CAN STILL FEEL CAPTURED BY ITS MACHINERY
+MACHINERY CAN BECOME SELF-MAINTAINING -> RECHECK WHETHER IT STILL PAYS RENT
 ```
 
-The recovery was structural, not motivational:
+The recovery was a human-AI audit sequence, not autonomous Agent enlightenment:
 
-1. **Separate the product from the personal need**: ENA became a research project (with real
-   value: it is falsifiable, has field discipline, accepts contributions); the *personal need*
-   stayed a 5-line card (backup before change / recovery must not depend on the broken self /
-   restore ≠ rolled-back world-but-authority / ideas stay latent until measured / one success is
-   not a law).
-2. **Ask the ownership question explicitly**: after building it, the owner asked the agent two
-   hard questions — *would you fully comply with ENA? is the lease closed-loop actually useful?*
-   The honest answers (no compliance-without-proportionality; the lease is an authority gate, not
-   a safety device) were themselves a Workbench demo: **the human should be able to audit the
-   mechanism it grew**, and the AI should answer evidence-first instead of loyalty-first.
-3. **Reconnect to the original problem before more machinery**: the agent proposed three small
-   "organs" instead of new theory — rescue snapshot + idea ledger + measurement baseline. This is
-   exactly the Workbench rule "reconnect the next action to the project plan... are we solving the
-   original problem, or mainly maintaining machinery created by our previous solution?"
+1. **Human discomfort became a trigger.** The owner said the project felt "骑虎难下" instead of
+   treating that feeling as noise.
+2. **The owner interrogated the framework.** He asked whether an Agent should fully obey ENA and
+   whether the lease loop was actually useful. The Agent answered that proportionality matters and
+   that authorization is not recoverability.
+3. **The owner then asked the missing operational question explicitly:** whether ENA lacked support
+   for helping the Agent itself evolve. That question caused the DSH Agent to inspect its own LXC
+   Host rather than continue discussing ENA abstractly.
+4. **The Agent found a Host gap and proposed concrete organs:** rescue snapshot/canary, a durable
+   variation/idea ledger, and a lightweight before/after baseline. The owner authorized the build;
+   the Agent implemented and drilled them.
+
+The important causal lesson is therefore not "the Agent naturally operationalized ENA". It is:
+
+```text
+HUMAN DISCOMFORT
+-> VALUE / SCOPE AUDIT
+-> HUMAN ASKS FOR THE MISSING OPERATIONAL LAYER
+-> AGENT INSPECTS REAL HOST
+-> AGENT PROPOSES SMALL ORGANS
+-> HUMAN AUTHORIZES IMPLEMENTATION
+-> REALITY CONTACT
+```
+
+This is consistent with `HUMAN IN THE LOOP != HUMAN AS THE LOOP`: the human did not design the
+scripts line-by-line, but the human intervention was decision-material in getting from framework
+interpretation to Host operationalization.
 
 ## 2. The occurrence: measuring the framework's own claim
 
-ENA's own open question is whether its default-resident kernel adds measurable fresh-session
-salience. The agent ran a 3-arm controlled observation (kernel resident / same-host control /
-ENA-neutral control), 10 checkpoints, and all 10 passed in **all three arms** — including the arm
-with zero ENA instruction content.
+ENA's own open question was whether its default-resident kernel adds measurable fresh-session
+salience. A 3-arm observation was run (kernel resident / same-host control / ENA-neutral control),
+with a pre-written rubric and preserved transcripts.
 
-The maintainer's reconciliation narrowed the claim correctly:
+The maintainer reconciliation narrowed the contributor's headline correctly:
 
-1. one control run self-read the treatment file → unusable as untreated control (structural
-   isolation failure — the Workbench rule exists precisely for this);
-2. the two same-host arms shared an ENA-derived global baseline → cannot estimate true
+1. one control run self-read the treatment file, so it ceased to be an untreated comparator;
+2. the two same-host arms shared an ENA-derived global baseline, so they could not estimate a true
    ENA-vs-no-ENA margin;
-3. the frozen rubric defined a treat-vs-control comparison but the report's headline used the
-   neutral arm → the "0/10" was demoted from a preregistered score to post-hoc annotation.
+3. the frozen rubric defined a treat-vs-control comparison while the report emphasized the neutral
+   arm, and T2 checkpoint mapping changed post hoc.
 
-The lesson is the README's own text, now with a second real occurrence:
+The durable lesson is:
 
 ```text
-PREREGISTER THE COMPARISON THE REPORT WILL USE, OR SAY WHICH ONE YOU CHANGED
-STRUCTURAL ISOLATION FAILS EVEN WHEN INTENT IS HONEST (the model just read the other arm)
-NULL RESULT -> NULL RESULT: DO NOT RENAME THE TIE AS A WIN FOR THE FAVORITE METHOD
-PRESERVE FIRST OUTPUTS + ORIGINAL RUBRIC -> LATER INTERPRETATION CAN BE SEPARATED FROM TRUTH
+PREREGISTER THE COMPARISON THE REPORT WILL USE, OR SAY WHICH ONE CHANGED
+STRUCTURAL ISOLATION CAN FAIL EVEN WITH HONEST INTENT
+NULL / NON-DISCRIMINATING RESULT -> DO NOT RENAME IT AS A WIN
+PRESERVE FIRST OUTPUTS + ORIGINAL RUBRIC -> LATER INTERPRETATION CAN BE SEPARATED FROM OCCURRENCE TRUTH
 ```
 
-The maintainer's disposition (`ACCEPT_AS_FIELD_EVIDENCE_WITH_NARROWING /
-FIELD_UNRESOLVED_FOR_DURABLE_CLAIM / NO_NEW_PRIMARY`) is itself the pattern: good evidence
-discipline does not protect a hypothesis; it protects the ability to be corrected.
+The maintainer disposition (`ACCEPT_AS_FIELD_EVIDENCE_WITH_NARROWING /
+FIELD_UNRESOLVED_FOR_DURABLE_CLAIM / NO_NEW_PRIMARY`) is itself the pattern: evidence discipline
+protects corrigibility, not a favorite hypothesis.
 
 ## 3. What this occurrence adds
 
-- **Scope drift is recoverable mid-flight**: the exit was not abandoning the framework but
-  re-owning it (project vs personal card) and asking the agent to answer test questions about its
-  own usefulness (`pay rent`).
-- **The strongest correctness check was the human's discomfort**: "骑虎难下" was signal, not
-  noise — it triggered the audit. Do not over-normalize that feeling away.
-- **A downstream method**: when a human reports unease after AI expansion, ask the agent (1) what
-  the original need was in one paragraph, (2) which parts of the expansion are still load-bearing
-  for it, (3) what the cheapest instrument to measure that is. That sequence produced a 5-line
-  card + 3 scripts in one session, versus weeks of machinery maintenance.
+- **Scope drift is recoverable mid-flight.** Recovery did not require abandoning ENA; it required
+  separating research value from the original personal operating need and rechecking what still
+  earns its cost.
+- **Human discomfort can be decision-material evidence about process fit.** "骑虎难下" triggered a
+  useful audit. It does not prove the framework was worthless; it proved that ownership and scope
+  needed re-examination.
+- **Semantic understanding did not naturally trigger Host operationalization.** The Agent became
+  concrete only after the owner explicitly asked whether ENA lacked self-evolution support. This is
+  a Human-AI workflow finding, not proof that every Agent needs the same three tools.
+- **The human can set the problem while the Agent proposes the organ.** The owner did not specify
+  rescue/ledger/baseline implementations in detail; the Agent proposed them after inspecting the
+  Host, then implemented them after authorization.
+
+A candidate audit sequence, still **NOT_A_TEMPLATE**, is:
+
+```text
+1. Restate the original need in one paragraph.
+2. Ask which accumulated machinery is still load-bearing and what it costs.
+3. Ask explicitly whether the current system lacks a practical/operational layer.
+4. Inspect the real Host before proposing new machinery.
+5. Prefer the smallest measurable organ that can change the real outcome.
+```
 
 ## 4. Boundary
 
-This is a diary of one project's day. No new Workbench template is proposed; the existing rules
-already covered all three failures. If the same sequence recurs in a non-ENA project with a third
-or fourth different pair of AI/human, the *scope-drift audit sequence* may earn a template —
-not before.
+This remains one ENA-derived project occurrence. It does not count toward cross-project promotion
+signals and does not establish a universal scope-drift template. Promotion requires recurrence in
+non-ENA work with different humans/Agents/projects.
+
+The self-maintenance implementation is also owner-directed dogfood: the owner's question triggered
+the Host audit and the owner authorized installation. It is not evidence that semantic adoption
+alone causes an Agent to grow the right local organs.
 
 ## Files
 
