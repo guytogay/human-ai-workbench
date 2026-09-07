@@ -12,6 +12,8 @@ Current candidate relations under real-use testing:
 
 ```text
 HUMAN IN THE LOOP != HUMAN AS THE LOOP
+HUMAN JUDGMENT != HUMAN BYTE TRANSPORT
+SELF-EXECUTABLE WORK -> AGENT EXECUTES BY DEFAULT
 REDUCE COORDINATION BY DESIGN BEFORE AUTOMATING COORDINATION
 CONTROL COST SHOULD TRACK CHANGE RISK
 PROTECT HISTORY != PROTECT STASIS
@@ -20,6 +22,26 @@ DUPLICATED LIVE STATE -> SYNCHRONIZATION DEBT
 ACTIVE IDENTITY != HISTORICAL PROVENANCE
 INFORMATION ISOLATION != EXECUTION ISOLATION
 ORCHESTRATION AUTOMATION != FRESH EXECUTION SURFACE
+```
+
+## Active execution rule
+
+When an AI/Agent has the tools and authority to complete an experiment, repository operation, evidence capture, scoring step, or mechanical relay itself, it should do so directly rather than assigning transport work to the human.
+
+Use human action only when it is genuinely decision-bearing or technically irreducible, for example:
+
+- consequential judgment or authorization;
+- a fresh execution surface that the available tools cannot instantiate without contamination;
+- an external account/device/UI boundary unavailable to the Agent;
+- a required physical-world action.
+
+Disposable branches and cleanroom repositories are execution surfaces, not human chores. They may be created, reset, or deleted when this improves isolation or speed, provided unique evidence/provenance is preserved before deletion.
+
+```text
+AUTOMATION_AVAILABLE != AUTOMATION_REQUIRED_FOR_EVERYTHING
+HUMAN_AVAILABLE != HUMAN_SHOULD_RELAY
+CLEANROOM_REPO != PERMANENT_ARCHIVE
+PRESERVE_EVIDENCE -> DELETE_DISPOSABLE_SURFACE_WHEN_NO_LONGER_USEFUL
 ```
 
 ## Where we are
@@ -36,6 +58,7 @@ ORCHESTRATION AUTOMATION != FRESH EXECUTION SURFACE
 - ENA Metamemory manager-side automation verified frozen treatment identity, scored M1-M7 and applied the frozen replication rule, while four genuinely fresh Temporary Chats still required explicit human launch/transport.
 - The four Metamemory runs completed without protocol incompatibility or replication trigger. The residual human role was fresh-context instantiation and byte transport rather than scoring or experimental judgment.
 - This completed occurrence reinforces that information/process isolation and execution isolation are separate capabilities, and that a small residual manual boundary does not automatically justify persistent runner infrastructure.
+- Project-owner direction now makes the default explicit: if the Agent can execute the mechanical work itself without changing the required experimental boundary, do not make the human copy/paste or relay it.
 
 ## Active observations
 
@@ -72,15 +95,16 @@ When coordination pain appears:
 1. identify which steps require human judgment;
 2. identify which remaining steps are transport/mechanical coordination;
 3. ask whether the workflow can remove those steps without changing the phenomenon or decision quality;
-4. automate only unavoidable transport;
-5. add persistent orchestration only after repeated real use justifies its maintenance cost.
+4. if the Agent can execute the remaining mechanical steps with available tools/authority, execute them directly;
+5. automate only unavoidable transport that remains;
+6. add persistent orchestration only after repeated real use justifies its maintenance cost.
 
 When independence is required, separately ask:
 
 1. can treatment/sequencing/capture/scoring be isolated and automated?
 2. can the required fresh model execution context actually be instantiated without manager contamination?
 
-Do not infer the second from success on the first.
+Do not infer the second from success on the first. Do not ask the human to act as transport merely because a previous experiment used manual relay.
 
 ### 2. Proportional progression
 
@@ -130,16 +154,17 @@ Human attention should be spent on:
 - reality contact and values;
 - escalation when automation cannot safely decide.
 
-Human attention should not be spent on mechanically relaying bytes, synchronizing duplicate live-state copies, or repeating ceremony whose decision value has disappeared.
+Human attention should not be spent on mechanically relaying bytes, synchronizing duplicate live-state copies, repeating ceremony whose decision value has disappeared, or launching/copying experimental material that the Agent can already execute itself without invalidating the experiment.
 
 If the required fresh execution surface is genuinely unavailable to automation, keep the residual human transport minimal and explicit rather than pretending a manager/subprocess/clean repo is an independent worker.
 
 ## Next consequential actions
 
 1. Stop using ENA as the sole source of Workbench method evidence. The next strong promotion signal for staged publication or risk-proportional progression should come from another project or a materially different state/control surface.
-2. Observe whether the fresh-execution boundary recurs with enough volume to justify an API/browser/Agent runner. Do not build one merely because the four-run Metamemory case required manual launches.
-3. Observe real projects for cases where narrow tool authority creates repeated friction large enough to justify a new capability boundary; do not broaden permissions for one-off convenience.
-4. Keep measuring coordination cost, human judgment necessity, readback catches, rollback usability, and synchronization debt in normal work rather than creating synthetic Workbench experiments.
+2. In future AI experiments, remove human relay first wherever available Agent tools can preserve the required isolation. Observe only the irreducible fresh-execution boundary; do not retain manual copy/paste by inertia.
+3. Observe whether that irreducible fresh-execution boundary recurs with enough volume to justify an API/browser/Agent runner. Do not build one merely because one campaign required manual launches.
+4. Observe real projects for cases where narrow tool authority creates repeated friction large enough to justify a new capability boundary; do not broaden permissions for one-off convenience.
+5. Keep measuring coordination cost, human judgment necessity, readback catches, rollback usability, and synchronization debt in normal work rather than creating synthetic Workbench experiments.
 
 For future progression/publication records capture:
 
@@ -157,6 +182,7 @@ For future fresh-worker records capture:
 
 - number of residual human launch/transport steps;
 - which steps genuinely require judgment;
+- which mechanical steps the Agent could self-execute and whether it actually did;
 - treatment-delivery/output-capture errors;
 - whether repeated burden justifies a callable fresh-worker surface;
 - whether a candidate automation surface preserves the required Host or silently changes the experiment/workflow contract.
@@ -181,6 +207,7 @@ For future fresh-worker records capture:
 - Do not treat an Agent runner as an independent validator unless context isolation is demonstrated.
 - Do not replace a preregistered execution Host after seeing the design merely because another surface is easier to automate.
 - Do not preserve unnecessary workflow stages merely so they can be automated.
+- Do not ask the human to perform copy/paste, byte relay, repository setup, or experiment transport that available Agent tooling can complete without changing the required boundary.
 - Do not add a universal orchestration, release, or transaction template before repeated cross-context real use.
 - Do not use "rapid" as permission to hide semantic/high-consequence changes inside low-risk labels.
 - Do not use atomic publication as proof that the candidate content itself is correct.
