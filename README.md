@@ -31,6 +31,26 @@ Repository boundaries:
 
 Do not keep parallel canonical copies merely because a method was first discovered inside ENA.
 
+### Repository boundary test
+
+When it is unclear where a practice belongs, apply a test rather than arguing about wording:
+
+> **If a practice can be stated, applied, and evaluated without relying on ENA-specific
+> concepts, artifacts, contracts, or internal state semantics, its canonical home is
+> `human-ai-workbench`; otherwise it belongs in `guytogay/ENA`.**
+
+A short three-way split settles the common cases:
+
+- **`guytogay/ENA`** — how to correctly use, run, verify, and maintain ENA. Removing ENA's
+  contracts, state, or capability surface leaves the material meaningless.
+- **`human-ai-workbench`** — cross-project human-AI working method. It must stay usable and
+  verifiable by someone who does not understand ENA at all.
+- **`guytogay/evolution-native-agent-architecture`** — theory, research evidence, lineage, and
+  formal Current / promotion semantics.
+
+The word **evaluated** is doing real work: without it, renaming a few nouns starts to look like
+generalization.
+
 Preferred ownership transition:
 
 ```text
