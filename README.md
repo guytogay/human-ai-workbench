@@ -27,7 +27,7 @@ Repository boundaries:
 
 - `guytogay/evolution-native-agent-architecture` owns ENA theory, mechanisms, Current/release semantics, ENA research evidence, and ENA-specific project occurrences.
 - `guytogay/human-ai-workbench` owns reusable human-AI collaboration method: continuation, handoff, project-state practice, lightweight experiment execution discipline, and temporary-workspace lifecycle when those patterns generalize beyond ENA.
-- `guytogay/ena-field-guide` owns evidence-backed practical HOW for applying ENA-derived mechanisms in Agent/Host work.
+- `guytogay/ENA` owns the adopter-facing product line and the practical HOW necessary to use it. (`guytogay/ena-field-guide` was `SUNSET / NO LONGER AN INDEPENDENT PRODUCT`; it is preserved for history and evidence only, and adapters should not be pointed at a second repository.)
 
 Do not keep parallel canonical copies merely because a method was first discovered inside ENA.
 
