@@ -1,9 +1,0 @@
-experiments: unprimed adopter surfaces, mutation teeth, parser-checked docs
-
-A method record that states the practice without relying on any product-specific
-concept: publish a structurally fresh surface for an evaluator that cannot see the
-project's assumptions; require it to declare its own evidence boundary; replay after
-the fix. Prove a check can fail by mutating the real verified revision, not a
-strawman, and demand satisfiability of every clause check. Parse the documentation
-with the product's own reader, and seek the smallest differentiating cases. Close
-with the two generalizable lessons about refusals and readiness boundaries.
