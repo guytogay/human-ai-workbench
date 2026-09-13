@@ -180,3 +180,66 @@ a check was promoted     -> the product runs it, and the oracle stayed independe
 
 The single habit that produces all of them: when someone says "done", ask **which artifact would
 have to exist for that to be true**, then go look at it.
+
+## 8. A message you never read is not a message you sent
+
+Sending feels like a terminal action: the text is out, the channel shows it, something else can have
+your attention. So an agent that works in turns will send a question to a peer or a human, end its
+turn, and never look at the answer. From the sender's side nothing is missing. From the other side the
+collaboration has quietly become a **broadcast**, and the human ends up saying the sentence nobody
+should have to say: *you sent it, so read the reply.*
+
+Observed occurrence: several exchanges in one long session where each outgoing message was written and
+dispatched, and the answer — including a substantive ruling that changed what should happen next —
+was only read after the human pointed out the pattern. The cost was not just the missed ruling: the
+work continued on assumptions that the reply had already superseded.
+
+Why it happens is structural, not careless:
+
+- **Sending is rewarded immediately; reading is not.** The send completes a thought.
+- **The reply arrives in a different surface** from the one the agent is working in, and nothing
+  interrupts to say it landed.
+- **A turn boundary looks like a safe stopping point**, and the reply has not arrived by then.
+
+Disciplines:
+
+- **Treat send-and-read as one atomic step.** A message is not delivered until its reply has been read;
+  until then it is *outstanding*, and outstanding is a state, not a completion.
+- **When work is asynchronous, the read must be scheduled, not hoped for** — a concrete trigger (the
+  next turn in that collaboration, a check at a natural boundary, a watcher), never "later".
+- **At the start of any turn inside an ongoing collaboration, read the channel before acting.** Acting
+  on a stale assumption is worse than waiting one step.
+- **Carry unread replies as open items**, with the same status as an unfinished task, because that is
+  what they are.
+
+## 9. Deferring an action is allowed; deferring durability is not
+
+"Do it next time" is sometimes the right call — a release that would add churn, a change waiting on
+evidence, a decision that genuinely needs a field signal. The failure mode is not the delay. It is the
+**delay with no artifact**.
+
+Observed occurrence: a maintainer's release ruling (hold the fix, ship it as a patch when one of three
+conditions occurs) existed **only inside a chat transcript**. The code had landed and was verified; the
+decision about when it becomes a release lived nowhere a future session would look. Recovering it later
+would cost exactly what the transcript costs to re-read, and if the topic were interleaved with others
+first, the ruling might not be recovered at all.
+
+The distinction that makes this decidable:
+
+```text
+DEFER AN ACTION            allowed, if the TRIGGER is written into an artifact AT THE MOMENT of
+                           deferring: what would cause it to proceed, who checks, and where the
+                           pending item is recorded.
+DEFER MAKING IT DURABLE    never allowed. An item that exists only as "we will deal with it later"
+                           in a conversation is a plan to lose it.
+DEFER THE EVIDENCE         allowed and often correct: the action is blocked on reality, not on
+                           attention. The threshold must still be written down now.
+```
+
+Practical form that works: a **pending ledger** with one line per deferred item — the decision, the
+trigger, the artifact that would change, and the link to where the reasoning lives. It is cheap to
+write at the moment of deferral and it removes the entire reconstruction cost later.
+
+A useful test before ending a turn: **if the context disappeared right now, what would be lost?**
+Anything in that answer belongs in a file, an issue, or a ledger — not in the conversation.
+
