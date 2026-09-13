@@ -86,6 +86,13 @@ Completed fresh-execution boundary observation:
 
 `experiments/2026-09-06-ENA-METAMEMORY-FRESH-EXECUTION-BOUNDARY.md`
 
+Newest method records (independent verification, and closing a work cycle honestly):
+
+- `experiments/2026-09-12-UNPRIMED-ADOPTER-SURFACES-AND-MUTATION-TEETH.md`
+- `experiments/2026-09-12-VERIFYING-THE-VERIFIER.md`
+- `experiments/2026-09-12-MULTI-PARTY-CHANNELS-AND-INDEPENDENT-VERIFICATION.md`
+- `experiments/2026-09-13-CLOSING-HONESTLY.md`
+
 ## Current methods under test
 
 ### 1. Coordination reduction
