@@ -1,0 +1,20 @@
+name: Task trigger
+
+on:
+  push:
+    paths: ['tools/**', '.github/workflows/task-trigger.yml']
+  pull_request:
+    paths: ['tools/**', '.github/workflows/task-trigger.yml']
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tools -p 'test_task_trigger.py'
