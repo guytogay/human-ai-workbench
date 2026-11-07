@@ -152,6 +152,8 @@ The first version intentionally stays small:
 
 Git history stores history. Issues store open work. CI stores machine-known execution facts. Do not copy those facts into multiple status documents unless they change a human or AI decision.
 
+For a project whose Host can dispatch tasks, [`tools/task_trigger.py`](tools/README.md) is an **optional** durable, event-driven task register. It releases dependent work immediately after a task-finish event, separates task completion from project acceptance, and stops dispatch on an explicit end. It does not run Agents or reconnect chat channels: the Host must supply those hooks. Use it only when real task handoffs need automation; ordinary small projects need no extra ledger.
+
 ## Default numbers
 
 These are defaults, not laws. Change them when real use shows a better value.
